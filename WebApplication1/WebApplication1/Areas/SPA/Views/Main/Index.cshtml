@@ -8,6 +8,10 @@
         <title>Employee Single Page Application</title>
     </head>
     <body>
+        <div>
+            @Html.Action("EmployeeList", "Main")
+        </div>
 
+        @Html.Partial("Footer", Model.FooterData)
     </body>
 </html>

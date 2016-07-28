@@ -7,6 +7,7 @@ using OldViewModel = WebApplication1.ViewModels;
 using WebApplication1.ViewModels.SPA;
 using WebApplication1.BusinessLayer;
 using WebApplication1.BusinessEntities;
+using WebApplication1.Filters;
 
 namespace WebApplication1.Areas.SPA.Controllers
 {
