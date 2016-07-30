@@ -56,6 +56,28 @@ namespace WebApplication1.Areas.SPA.Controllers
             return View("EmployeeList", employeesVM);
         }
 
+        [AdminFilter]
+        public ActionResult AddNew()
+        {
+            CreateEmployeeViewModel vm = new CreateEmployeeViewModel();
+            return PartialView("CreateEmployee", vm);
+        }
+
+        [AdminFilter]
+        public ActionResult SaveEmployee(Employee e)
+        {
+            EmployeeBusinessLayer employeeBL = new EmployeeBusinessLayer();
+            employeeBL.SaveEmployee(e);
+
+            EmployeeViewModel vm = new EmployeeViewModel();
+            vm.EmployeeName = e.FirstName + " " + e.LastName;
+            vm.Salary = e.Salary.Value.ToString("C");
+            vm.SalaryColor = e.Salary > 15000 ? "yello" : "green";
+
+            return Json(vm);
+
+        }
+
         public ActionResult GetAddNewLink()
         {
             if (Convert.ToBoolean(Session["Admin"]))
