@@ -7,10 +7,12 @@ using SportsStore.WebUI.Models;
 namespace SportsStore.WebUI.Controllers {
 
     public class CartController : Controller {
-        private IProductRepository repository;
+        private IProductRepository _repository;
+        private IOrderProcessor _orderProcessor;
 
-        public CartController(IProductRepository repo) {
-            repository = repo;
+        public CartController(IProductRepository repository, IOrderProcessor orderProcessor) {
+            _repository = repository;
+            _orderProcessor = orderProcessor;
         }
 
         public ViewResult Index(Cart cart, string returnUrl) {
@@ -21,7 +23,7 @@ namespace SportsStore.WebUI.Controllers {
         }
 
         public RedirectToRouteResult AddToCart(Cart cart, int productId, string returnUrl) {
-            Product product = repository.Products
+            Product product = _repository.Products
                 .FirstOrDefault(p => p.ProductID == productId);
 
             if (product != null) {
@@ -31,7 +33,7 @@ namespace SportsStore.WebUI.Controllers {
         }
 
         public RedirectToRouteResult RemoveFromCart(Cart cart, int productId, string returnUrl) {
-            Product product = repository.Products
+            Product product = _repository.Products
                 .FirstOrDefault(p => p.ProductID == productId);
 
             if (product != null) {
@@ -48,6 +50,26 @@ namespace SportsStore.WebUI.Controllers {
         public ViewResult Checkout()
         {
             return View(new ShippingDetails());
+        }
+
+        [HttpPost]
+        public ViewResult Checkout(Cart cart, ShippingDetails shippingDetails)
+        {
+            if (cart.Lines.Count() == 0)
+            {
+                ModelState.AddModelError("", "Sorry, your cart is empty");
+            }
+
+            if (ModelState.IsValid)
+            {
+                _orderProcessor.ProcessingOrder(cart, shippingDetails);
+
+                return View("Completed");
+            }
+            else
+            {
+                return View(shippingDetails);
+            }
         }
     }
 }
