@@ -63,7 +63,7 @@ namespace SportsStore.WebUI.Controllers {
             if (ModelState.IsValid)
             {
                 _orderProcessor.ProcessingOrder(cart, shippingDetails);
-
+                cart.Clear();
                 return View("Completed");
             }
             else

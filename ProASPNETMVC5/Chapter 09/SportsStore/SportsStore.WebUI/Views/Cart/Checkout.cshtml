@@ -9,6 +9,7 @@
 
 @using (Html.BeginForm())
 {
+    @Html.ValidationSummary()
     <h3>Ship To</h3>
     foreach (var property in ViewData.ModelMetadata.Properties)
     {
