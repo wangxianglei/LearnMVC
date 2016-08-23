@@ -8,6 +8,7 @@ using System.Web.Mvc;
 
 namespace SportsStore.WebUI.Controllers
 {
+    [Authorize]
     public class AdminController : Controller
     {
         private IProductRepository _productRepository;
@@ -43,6 +44,23 @@ namespace SportsStore.WebUI.Controllers
             {
                 return View(product);
             }
+        }
+
+        public ViewResult Create()
+        {
+            return View("Edit", new Product());
+        }
+
+        public ActionResult Delete(int productId)
+        {
+            Product product = _productRepository.DeleteProduct(productId);
+
+            if (product != null)
+            {
+                TempData["Message"] = string.Format("{0} was deleted", product.Name);
+            }
+
+            return RedirectToAction("Index");
         }
     }
 }

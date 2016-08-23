@@ -18,6 +18,9 @@
                 <th>
                     @Html.DisplayNameFor(model => model.Name)
                 </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Category)
+                </th>
                 <th class="text-right">
                     @Html.DisplayNameFor(model => model.Price)
                 </th>
@@ -34,6 +37,9 @@
                     </td>
                     <td>
                         @Html.ActionLink(item.Name, "Edit", new { item.ProductID})
+                    </td>
+                    <td>
+                        @item.Category
                     </td>
                     <td class="text-right">
                         @item.Price.ToString("c")

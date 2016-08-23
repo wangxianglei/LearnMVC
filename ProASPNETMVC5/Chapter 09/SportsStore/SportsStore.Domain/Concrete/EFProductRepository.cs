@@ -5,21 +5,21 @@ using System.Collections.Generic;
 namespace SportsStore.Domain.Concrete {
 
     public class EFProductRepository : IProductRepository {
-        private EFDbContext context = new EFDbContext();
+        private EFDbContext _context = new EFDbContext();
 
         public IEnumerable<Product> Products {
-            get { return context.Products; }
+            get { return _context.Products; }
         }
 
         public void SaveProduct(Product product)
         {
             if (product.ProductID == 0)
             {
-                context.Products.Add(product);
+                _context.Products.Add(product);
             }
             else
             {
-                Product productContext = context.Products.Find(product.ProductID);
+                Product productContext = _context.Products.Find(product.ProductID);
 
                 if (productContext != null)
                 {
@@ -28,9 +28,22 @@ namespace SportsStore.Domain.Concrete {
                     productContext.Price = product.Price;
                     productContext.Category = product.Category;
                 }
-
-                context.SaveChanges();
             }
+
+            _context.SaveChanges();
+        }
+
+        public Product DeleteProduct(int productId)
+        {
+            Product product = _context.Products.Find(productId);
+
+            if(product != null)
+            {
+                _context.Products.Remove(product);
+                _context.SaveChanges();
+            }
+
+            return product;
         }
     }
 }
