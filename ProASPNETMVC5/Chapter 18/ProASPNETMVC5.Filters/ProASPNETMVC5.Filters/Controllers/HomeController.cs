@@ -14,5 +14,12 @@ namespace ProASPNETMVC5.Filters.Controllers
         {
             return "This is Index action on the Home controller";
         }
+
+        [GoogleAuth]
+        [Authorize(Users = "wangxianglei@google.com")]
+        public string List()
+        {
+            return "This is List action on the Home controller";
+        }
     }
 }

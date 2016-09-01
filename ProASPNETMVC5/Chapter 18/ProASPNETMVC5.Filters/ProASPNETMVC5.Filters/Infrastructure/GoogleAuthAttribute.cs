@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Mvc.Filters;
 using System.Web.Routing;
+using System.Web.Security;
 
 namespace ProASPNETMVC5.Filters.Infrastructure
 {
@@ -26,10 +27,14 @@ namespace ProASPNETMVC5.Filters.Infrastructure
             if (filterContext.Result == null || filterContext.Result is HttpUnauthorizedResult)
             {
                 filterContext.Result = new RedirectToRouteResult(new RouteValueDictionary {
-                    { "controller", "GoolgeAccount"},
+                    { "controller", "GoogleAccount"},
                     { "action","Login"},
                     { "returnUrl", filterContext.HttpContext.Request.RawUrl}
                 });
+            }
+            else
+            {
+                FormsAuthentication.SignOut();
             }
         }
     }
