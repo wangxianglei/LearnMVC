@@ -9,6 +9,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadDeviceToCloudMessages",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimulatedDevice", "SimulatedDevice\SimulatedDevice.csproj", "{4704F0E6-C5EE-4546-80E3-316F2559F259}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProcessDeviceToCloudMessages", "ProcessDeviceToCloudMessages\ProcessDeviceToCloudMessages.csproj", "{89B949B6-C055-4C1C-8D9D-87EECADBEFE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicrosoftAzure.Tutorial.ServiceBus.SendMessage", "MicrosoftAzure.Tutorial.ServiceBus.SendMessage\MicrosoftAzure.Tutorial.ServiceBus.SendMessage.csproj", "{341B5883-44F3-4F82-9E07-EF0FCAE75A15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicrosoftAzure.Tutorial.ServiceBus.ReceiveMessage", "MicrosoftAzure.Tutorial.ServiceBus.ReceiveMessage\MicrosoftAzure.Tutorial.ServiceBus.ReceiveMessage.csproj", "{486BEAB2-A174-4FD2-9BEF-E81F6AD5D2F3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +33,18 @@ Global
 		{4704F0E6-C5EE-4546-80E3-316F2559F259}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4704F0E6-C5EE-4546-80E3-316F2559F259}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4704F0E6-C5EE-4546-80E3-316F2559F259}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89B949B6-C055-4C1C-8D9D-87EECADBEFE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89B949B6-C055-4C1C-8D9D-87EECADBEFE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89B949B6-C055-4C1C-8D9D-87EECADBEFE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89B949B6-C055-4C1C-8D9D-87EECADBEFE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{341B5883-44F3-4F82-9E07-EF0FCAE75A15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{341B5883-44F3-4F82-9E07-EF0FCAE75A15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{341B5883-44F3-4F82-9E07-EF0FCAE75A15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{341B5883-44F3-4F82-9E07-EF0FCAE75A15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{486BEAB2-A174-4FD2-9BEF-E81F6AD5D2F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{486BEAB2-A174-4FD2-9BEF-E81F6AD5D2F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{486BEAB2-A174-4FD2-9BEF-E81F6AD5D2F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{486BEAB2-A174-4FD2-9BEF-E81F6AD5D2F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

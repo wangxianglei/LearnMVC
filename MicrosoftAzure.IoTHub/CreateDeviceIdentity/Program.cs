@@ -11,7 +11,7 @@ namespace CreateDeviceIdentity
     class Program
     {
         static RegistryManager registryManager;
-        static string connectionString = "HostName=AzureIoTHubWXL.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=wGptxByn6vS7lvxsvWgsq5TwJKESgxQOv8XEcEOEZ6w=";
+        static string connectionString = "HostName=azure-iot-hub-tutorial.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=SV1bzKTvHh0MhLx/KTPhpC74VpLm7diGh42buCsdFME=";
 
         static void Main(string[] args)
         {
@@ -23,7 +23,7 @@ namespace CreateDeviceIdentity
 
         private static async Task AddDeviceAsync()
         {
-            string deviceId = "myFirstDevice";
+            string deviceId = "device-s-1";
             Device device;
 
             try

@@ -11,18 +11,18 @@ namespace SimulatedDevice
     class Program
     {
         static DeviceClient deviceClient;
-        //static string iotHubUri = "HostName=AzureIoTHubWXL.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=wGptxByn6vS7lvxsvWgsq5TwJKESgxQOv8XEcEOEZ6w=";
-        //static string iotHubUri = "HostName=AzureIoTHubWXL.azure-devices.net;SharedAccessKeyName=device;SharedAccessKey=sN2foMpUuwTP1l9z9WWYVmMXNAyn/7Ylk9a9u/xgEQY=";
-        static string iotHubUri = "AzureIoTHubWXL.azure-devices.net";
-        static string deviceKey = "vjSyJL1+BMKBOXA9oNiJeea3QiEJDBfcGVZKKTKfmGM=";
-        static string deviceId = "myFirstDevice";
+        //static string iotHubUri = "HostName=azure-iot-hub-tutorial.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=SV1bzKTvHh0MhLx/KTPhpC74VpLm7diGh42buCsdFME=";
+        //static string iotHubUri = "HostName=azure-iot-hub-tutorial.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=SV1bzKTvHh0MhLx/KTPhpC74VpLm7diGh42buCsdFME=";
+        static string iotHubUri = "azure-iot-hub-tutorial.azure-devices.net";
+        static string deviceKey = "fxnYm8l85jD7Ei0vdcxTZa6qxDEqXOcuHUq5/93cfyc=";
+        static string deviceId = "device-s-1";
         static void Main(string[] args)
         {
             Console.WriteLine("Simulated Devices\n");
 
             deviceClient = DeviceClient.Create(iotHubUri, new DeviceAuthenticationWithRegistrySymmetricKey(deviceId, deviceKey));
-            SendDeviceToCloudMessageAsync();
-
+            //SendDeviceToCloudMessageAsync();
+            SendDeviceToCloudInteractiveMessageAsync();
             Console.ReadLine();
         }
 
@@ -37,7 +37,7 @@ namespace SimulatedDevice
 
                 var telemetryDataPoint = new
                 {
-                    deviceId = "myFirstDevice",
+                    deviceId = deviceId,
                     windSpeed = currentWindSpeed
                 };
 
@@ -46,6 +46,22 @@ namespace SimulatedDevice
 
                 await deviceClient.SendEventAsync(message);
                 Console.WriteLine("{0}> Sending message: {1}", DateTime.Now, messageString);
+
+                Task.Delay(1000).Wait();
+            }
+        }
+
+        private static async void SendDeviceToCloudInteractiveMessageAsync()
+        {
+            while (true)
+            {
+                var interactiveMessageString = "Alert message !";
+                var interactiveMessage = new Message(Encoding.ASCII.GetBytes(interactiveMessageString));
+                interactiveMessage.Properties["messageType"] = "interactive";
+                interactiveMessage.MessageId = Guid.NewGuid().ToString();
+
+                await deviceClient.SendEventAsync(interactiveMessage);
+                Console.WriteLine("{0}> Send interactive message: {1}", DateTime.Now, interactiveMessageString);
 
                 Task.Delay(1000).Wait();
             }
