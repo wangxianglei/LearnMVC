@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.ServiceBus.Messaging;
 using Microsoft.Azure;
+using Microsoft.ServiceBus;
 
 namespace MicrosoftAzure.Tutorial.ServiceBus.ReceiveMessage
 {
@@ -13,16 +14,33 @@ namespace MicrosoftAzure.Tutorial.ServiceBus.ReceiveMessage
         static void Main(string[] args)
         {
             var connectionString = CloudConfigurationManager.GetSetting("Microsoft.ServiceBus.ConnectionString");
-            var queueName = "q-azure-iot-tutorial";
 
-            var receiveQueueClient = QueueClient.CreateFromConnectionString(connectionString, queueName);
-            receiveQueueClient.OnMessage(message =>
+            NamespaceManager namespaceManager = NamespaceManager.CreateFromConnectionString(connectionString);
+
+            SubscriptionClient client = SubscriptionClient.CreateFromConnectionString(connectionString, "topicTest", "subscriptionHighMessage");
+
+            OnMessageOptions options = new OnMessageOptions();
+            options.AutoComplete = false;
+            options.AutoRenewTimeout = TimeSpan.FromMinutes(1);
+
+            client.OnMessage((message) =>
             {
-                Console.WriteLine("Message body: {0}", message.GetBody<string>());
-                Console.WriteLine("Message id: {0}", message.MessageId.ToString());
-            });
+                try
+                {
+                    Console.WriteLine("\nHigh messages");
+                    Console.WriteLine("Body: " + message.GetBody<string>());
+                    Console.WriteLine("Message Id: " + message.MessageId);
+                    Console.WriteLine("Message Number: " + message.Properties["MessageNumber"]);
+                    message.Complete();
+                }
+                catch (Exception)
+                {
+                    message.Abandon();
+                }
+            }, options);
 
-            Console.ReadLine();
+            namespaceManager.DeleteTopic("topicTest");
+            namespaceManager.DeleteSubscription("topicTest", "subscriptionHighMessages");
         }
     }
 }
