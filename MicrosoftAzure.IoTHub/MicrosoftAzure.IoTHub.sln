@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateDeviceIdentity", "CreateDeviceIdentity\CreateDeviceIdentity.csproj", "{960BD666-A498-413A-9D28-B9E6BE40C4FA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicrosoftAzure.Tutorial.IoT.CreateDeviceIdentity", "CreateDeviceIdentity\MicrosoftAzure.Tutorial.IoT.CreateDeviceIdentity.csproj", "{960BD666-A498-413A-9D28-B9E6BE40C4FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadDeviceToCloudMessages", "ReadDeviceToCloudMessages\ReadDeviceToCloudMessages.csproj", "{937FF9DB-8BA5-4BF8-8F95-1185DD41E914}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicrosoftAzure.Tutorial.IoT.ReadDeviceToCloudMessages", "ReadDeviceToCloudMessages\MicrosoftAzure.Tutorial.IoT.ReadDeviceToCloudMessages.csproj", "{937FF9DB-8BA5-4BF8-8F95-1185DD41E914}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimulatedDevice", "SimulatedDevice\SimulatedDevice.csproj", "{4704F0E6-C5EE-4546-80E3-316F2559F259}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicrosoftAzure.Tutorial.IoT.SimulatedDevice", "SimulatedDevice\MicrosoftAzure.Tutorial.IoT.SimulatedDevice.csproj", "{4704F0E6-C5EE-4546-80E3-316F2559F259}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProcessDeviceToCloudMessages", "ProcessDeviceToCloudMessages\ProcessDeviceToCloudMessages.csproj", "{89B949B6-C055-4C1C-8D9D-87EECADBEFE5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicrosoftAzure.Tutorial.IoT.ProcessDeviceToCloudMessages", "ProcessDeviceToCloudMessages\MicrosoftAzure.Tutorial.IoT.ProcessDeviceToCloudMessages.csproj", "{89B949B6-C055-4C1C-8D9D-87EECADBEFE5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicrosoftAzure.Tutorial.ServiceBus.SendMessage", "MicrosoftAzure.Tutorial.ServiceBus.SendMessage\MicrosoftAzure.Tutorial.ServiceBus.SendMessage.csproj", "{341B5883-44F3-4F82-9E07-EF0FCAE75A15}"
 EndProject
@@ -20,6 +20,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicrosoftAzure.Tutorial.ServiceBus.ServiceBusRelayServer", "MicrosoftAzure.Tutorial.ServiceBus.ServiceBusRelayServer\MicrosoftAzure.Tutorial.ServiceBus.ServiceBusRelayServer.csproj", "{7F1019DC-811F-4FB3-A9DB-6B28C3AFBC49}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicrosoftAzure.Tutorial.ServiceBus.Common", "MicrosoftAzure.Tutorial.ServiceBus.Common\MicrosoftAzure.Tutorial.ServiceBus.Common.csproj", "{5F5A5BF0-2A6E-4DCE-924E-4290A238EB88}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicrosoftAzure.Tutorial.EventHub.Sender", "MicrosoftAzure.Tutorial.EventHub.Sender\MicrosoftAzure.Tutorial.EventHub.Sender.csproj", "{A0C15E5D-D90C-4562-8823-0FF3E2CCCAE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicrosoftAzure.Tutorial.EventHub.Receiver", "MicrosoftAzure.Tutorial.EventHub.Receiver\MicrosoftAzure.Tutorial.EventHub.Receiver.csproj", "{2C08E878-30DC-4FA6-A335-F609308EBAC4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +67,14 @@ Global
 		{5F5A5BF0-2A6E-4DCE-924E-4290A238EB88}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F5A5BF0-2A6E-4DCE-924E-4290A238EB88}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F5A5BF0-2A6E-4DCE-924E-4290A238EB88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0C15E5D-D90C-4562-8823-0FF3E2CCCAE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0C15E5D-D90C-4562-8823-0FF3E2CCCAE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0C15E5D-D90C-4562-8823-0FF3E2CCCAE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0C15E5D-D90C-4562-8823-0FF3E2CCCAE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C08E878-30DC-4FA6-A335-F609308EBAC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C08E878-30DC-4FA6-A335-F609308EBAC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C08E878-30DC-4FA6-A335-F609308EBAC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C08E878-30DC-4FA6-A335-F609308EBAC4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

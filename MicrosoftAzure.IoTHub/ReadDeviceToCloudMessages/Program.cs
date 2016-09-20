@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.ServiceBus.Messaging;
 using System.Threading;
 
-namespace ReadDeviceToCloudMessages
+namespace MicrosoftAzure.Tutorial.IoT.ReadDeviceToCloudMessages
 {
     class Program
     {

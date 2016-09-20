@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.Azure.Devices.Client;
 using Newtonsoft.Json;
 
-namespace SimulatedDevice
+namespace MicrosoftAzure.Tutorial.IoT.SimulatedDevice
 {
     class Program
     {

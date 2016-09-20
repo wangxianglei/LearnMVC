@@ -10,7 +10,7 @@ using Microsoft.ServiceBus.Messaging;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Blob;
 
-namespace ProcessDeviceToCloudMessages
+namespace MicrosoftAzure.Tutorial.IoT.ProcessDeviceToCloudMessages
 {
     class StoreEventProcessor : IEventProcessor
     {

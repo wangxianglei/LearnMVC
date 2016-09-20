@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.ServiceBus.Messaging;
 
-namespace ProcessDeviceToCloudMessages
+namespace MicrosoftAzure.Tutorial.IoT.ProcessDeviceToCloudMessages
 {
     class Program
     {

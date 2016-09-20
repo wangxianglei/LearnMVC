@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.Azure.Devices;
 using Microsoft.Azure.Devices.Common.Exceptions;
 
-namespace CreateDeviceIdentity
+namespace MicrosoftAzure.Tutorial.IoT.CreateDeviceIdentity
 {
     class Program
     {
