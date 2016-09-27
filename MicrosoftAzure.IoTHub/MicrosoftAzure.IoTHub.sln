@@ -25,6 +25,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicrosoftAzure.Tutorial.Eve
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicrosoftAzure.Tutorial.EventHub.Receiver", "MicrosoftAzure.Tutorial.EventHub.Receiver\MicrosoftAzure.Tutorial.EventHub.Receiver.csproj", "{2C08E878-30DC-4FA6-A335-F609308EBAC4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicrosoftAzure.Tutorial.RedisCache", "MicrosoftAzure.Tutorial.RedisCache\MicrosoftAzure.Tutorial.RedisCache.csproj", "{00105FE1-B1AD-4773-840C-3F1886764432}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicrosoftAzure.Tutorial.RedisCache.MVCMovie", "MicrosoftAzure.Tutorial.RedisCache.MVCMovie\MicrosoftAzure.Tutorial.RedisCache.MVCMovie.csproj", "{5F12AFF2-BD87-4C76-B87E-EF28063ADC13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicrosoftAzure.Tutorial.RedisCache.HelloWorld", "MicrosoftAzure.Tutorial.RedisCache.HelloWorld\MicrosoftAzure.Tutorial.RedisCache.HelloWorld.csproj", "{FE97458C-D643-4D6E-9CBB-63EB8C937946}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +81,18 @@ Global
 		{2C08E878-30DC-4FA6-A335-F609308EBAC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C08E878-30DC-4FA6-A335-F609308EBAC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C08E878-30DC-4FA6-A335-F609308EBAC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00105FE1-B1AD-4773-840C-3F1886764432}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00105FE1-B1AD-4773-840C-3F1886764432}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00105FE1-B1AD-4773-840C-3F1886764432}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00105FE1-B1AD-4773-840C-3F1886764432}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F12AFF2-BD87-4C76-B87E-EF28063ADC13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F12AFF2-BD87-4C76-B87E-EF28063ADC13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F12AFF2-BD87-4C76-B87E-EF28063ADC13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F12AFF2-BD87-4C76-B87E-EF28063ADC13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE97458C-D643-4D6E-9CBB-63EB8C937946}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE97458C-D643-4D6E-9CBB-63EB8C937946}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE97458C-D643-4D6E-9CBB-63EB8C937946}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE97458C-D643-4D6E-9CBB-63EB8C937946}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
