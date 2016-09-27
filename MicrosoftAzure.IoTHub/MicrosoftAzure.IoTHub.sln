@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicrosoftAzure.Tutorial.Red
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicrosoftAzure.Tutorial.RedisCache.HelloWorld", "MicrosoftAzure.Tutorial.RedisCache.HelloWorld\MicrosoftAzure.Tutorial.RedisCache.HelloWorld.csproj", "{FE97458C-D643-4D6E-9CBB-63EB8C937946}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicrosoftAzure.Tutorial.SendGrid", "MicrosoftAzure.Tutorial.SendGrid\MicrosoftAzure.Tutorial.SendGrid.csproj", "{AAD1D294-D5F1-4F9A-BD9E-E3CE5CD08AE0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{FE97458C-D643-4D6E-9CBB-63EB8C937946}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE97458C-D643-4D6E-9CBB-63EB8C937946}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE97458C-D643-4D6E-9CBB-63EB8C937946}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAD1D294-D5F1-4F9A-BD9E-E3CE5CD08AE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAD1D294-D5F1-4F9A-BD9E-E3CE5CD08AE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAD1D294-D5F1-4F9A-BD9E-E3CE5CD08AE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAD1D294-D5F1-4F9A-BD9E-E3CE5CD08AE0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
